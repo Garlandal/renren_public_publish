@@ -23,18 +23,18 @@ if __name__ == "__main__":
             	    manongs()
             	    qianduans()
         	if timecheck():
-        		numberx = open(r'ma_co.txt', 'r').readlines()
-                numbery = open(r'qian_co.txt', 'r').readlines()
-                number1 = int(str(numberx[0]))
-                number2 = int(str(numberx[0]))
-                pubcon1 = publishstr('manongio.txt')[number1]
-                pubcon2 = publishstr('qianduanio.txt')[number2]
-                renrenspider.publish(pubcon1)
-                count(number1 + 1, 'ma_co.txt')
-                time.sleep(7200)
-                renrenspider.publish(pubcon2)
-                count(number2 + 1, 'qian_co.txt')
-                time.sleep(7200)
+        	    numberx = open(r'ma_co.txt', 'r').readlines()
+                    numbery = open(r'qian_co.txt', 'r').readlines()
+                    number1 = int(str(numberx[0]))
+                    number2 = int(str(numberx[0]))
+                    pubcon1 = publishstr('manongio.txt')[number1]
+                    pubcon2 = publishstr('qianduanio.txt')[number2]
+                    renrenspider.publish(pubcon1)
+                    count(number1 + 1, 'ma_co.txt')
+                    time.sleep(14400)
+                    renrenspider.publish(pubcon2)
+                    count(number2 + 1, 'qian_co.txt')
+                    time.sleep(14400)
             
 
 
