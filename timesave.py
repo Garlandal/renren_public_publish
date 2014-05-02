@@ -5,7 +5,7 @@ import time
 
 
 #判断时间
-def timecheck(begin=0730,end=1950):
+def timecheck(begin=0730,end=2350):
     xtime = int(time.strftime("%H%M", time.localtime()))
     if xtime >= begin and xtime < end:
         return 1
