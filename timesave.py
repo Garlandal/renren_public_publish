@@ -6,12 +6,12 @@ import time
 
 #判断时间
 def timecheck(begin=0730,end=1950):
-	xtime = int(time.strftime("%H%M", time.localtime()))
-	if xtime >= begin and xtime < end:
-		return 1
-	else:
-		time.sleep(60)
-        return timecheck()
+    xtime = int(time.strftime("%H%M", time.localtime()))
+    if xtime >= begin and xtime < end:
+        return 1
+    else:
+        time.sleep(60)
+    return timecheck()
 
 #统计状态数量
 def count(number,cou_file):
