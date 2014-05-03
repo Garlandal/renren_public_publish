@@ -20,8 +20,8 @@ if __name__ == "__main__":
         renrenspider.login()
         while True:
         	if time.strftime("%a%H",time.localtime()) == 'Sat07':
-            	    manongs()
-            	    qianduans()
+				manongs()
+				qianduans()
         	if timecheck():
 				numberx = open(r'ma_co.txt', 'r').readlines()
                 numbery = open(r'qian_co.txt', 'r').readlines()
@@ -35,10 +35,3 @@ if __name__ == "__main__":
                 renrenspider.publish(pubcon2)
                 count(number2 + 1, 'qian_co.txt')
                 time.sleep(14400)
-            
-
-
-            
-            
-
-
