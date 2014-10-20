@@ -8,21 +8,21 @@ from timesave import timecheck, count, publishstr
 import time
 
 if __name__ == "__main__":
-    renrenspider = spider('主頁管理員帳號', '主頁管理員密碼')
-    try:
-        renrenspider.login()
-    except ValueError, e:
-        localtime = time.strftime(
-            '%Y-%m-%d %H-%M-%S', time.localtime(time.time()))
-        print 'login error' + localtime
-        time.sleep(43200)
-    finally:
-        renrenspider.login()
-        while True:
-        	if time.strftime("%a%H",time.localtime()) == 'Sat07':
-				manongs()
-				qianduans()
-        	if timecheck():
+    renrenspider = spider('人人帳號', '密碼')
+    while True:
+		if timecheck():
+			try:
+				renrenspider.login()
+			except ValueError, e:
+				localtime = time.strftime(
+						'%Y-%m-%d %H-%M-%S', time.localtime(time.time()))
+				print 'login error' + localtime
+				time.sleep(43200)
+				renrenspider.login()
+			finally:
+				if time.strftime("%a%H",time.localtime()) == 'Sat07':
+					manongs()
+					qianduans()
 				numberx = open(r'ma_co.txt', 'r').readlines()
                 numbery = open(r'qian_co.txt', 'r').readlines()
                 number1 = int(str(numberx[0]))
