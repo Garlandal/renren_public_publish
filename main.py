@@ -1,14 +1,13 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 
-from logpubish import spider
-from manongs import manongs
-from qianduans import qianduans
-from timesave import timecheck, count, publishstr
+from logpubish import Spider
+from spider import timecheck, count, publishstr, qianduans, manongs
+
 import time
 
 if __name__ == "__main__":
-    renrenspider = spider('人人帳號', '密碼')
+    renrenspider = Spider('人人帳號', '密碼')
     while True:
 		if timecheck():
 			try:
