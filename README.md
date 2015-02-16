@@ -1,4 +1,4 @@
-##Renren-Public-Publish
+###Renren-Public-Publish
 
 这是一个抓取码农周刊和前端周刊内容并定时由人人公共主页发布的Python程序
 
@@ -8,8 +8,8 @@
 
 当然不过是为了最低限度的使用，所以计数和内容保存都放在txt文件里了
 
-##安装所需的库
-``bash
+###安装所需的库
+```bash
 sudo easy_install requests
 sudo easy_install pyquery
 ```
